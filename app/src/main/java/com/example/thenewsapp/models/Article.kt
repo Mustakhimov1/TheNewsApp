@@ -3,6 +3,7 @@ package com.example.thenewsapp.models
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.io.Serializable
+import java.util.Objects
 
 @Entity(
     tableName = "articles"
@@ -18,4 +19,10 @@ data class Article(
     val title: String,
     val url: String,
     val urlToImage: String
-): Serializable
+): Serializable{
+
+    override fun hashCode(): Int {
+        return Objects.hashCode(title)
+    }
+}
+

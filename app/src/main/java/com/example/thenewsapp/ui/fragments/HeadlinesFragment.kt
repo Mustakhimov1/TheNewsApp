@@ -2,6 +2,7 @@ package com.example.thenewsapp.ui.fragments
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -48,9 +49,12 @@ class HeadlinesFragment : Fragment(R.layout.fragment_headlines) {
         setupHeadlinesRecycler()
 
         newsAdapter.setOnItemClickListener { article ->
-            article?.let {
-                val action = HeadlinesFragmentDirections.actionHeadlinesFragmentToArticleFragment(article)
+            article?.let { nonNullArticle ->
+                val action = HeadlinesFragmentDirections.actionHeadlinesFragmentToArticleFragment(nonNullArticle)
                 findNavController().navigate(action)
+            } ?: kotlin.run {
+                Log.e("HeadlinesFragment", "Article is null")
+                // Дополнительная обработка случая, когда article равен null
             }
         }
 
