@@ -2,14 +2,14 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.NewsProjectPractice" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <item name="colorPrimary">@color/purple</item>
-        <item name="colorPrimaryVariant">@color/purple</item>
-        <item name="android:statusBarColor">@color/purple</item>
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="android:statusBarColor">@color/black</item>
     </style>
 
     <style name="Theme.NewsProjectPractice" parent="Base.Theme.NewsProjectPractice" />
 
     <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
-        <item name="android:color">@color/yellow</item>
+        <item name="android:color">@color/red</item>
     </style>
 </resources>
