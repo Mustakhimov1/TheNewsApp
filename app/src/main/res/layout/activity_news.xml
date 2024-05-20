@@ -25,6 +25,7 @@
             app:defaultNavHost="true"
             app:navGraph="@navigation/news_nav_graph" />
 
+
     </FrameLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
